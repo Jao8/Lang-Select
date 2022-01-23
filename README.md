@@ -1,5 +1,11 @@
 # Modal Component Angular
 
+*Modal selector repository.* *Language selector used as example.*
+-
+
+\
+&nbsp;
+
 > :warning: **global.scss**
 
 ```scss
