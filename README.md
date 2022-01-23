@@ -1,7 +1,6 @@
 # Modal Component Angular
 
-*Modal selector repository.* *Language selector used as example.*
--
+### *Modal selector repository.* *Language selector used as example.*
 
 \
 &nbsp;
@@ -17,6 +16,8 @@ ion-modal.lang-modal {
   --border-radius: 10px;
 }
 ```
+\
+&nbsp;
 
 > **Ts File**
 
@@ -44,6 +45,9 @@ ion-modal.lang-modal {
   }
 
 ```
+
+\
+&nbsp;
 
 > **HTML Modal Component File**
 
@@ -78,6 +82,9 @@ ion-modal.lang-modal {
 
 </ion-list>
 ```
+
+\
+&nbsp;
 
 > **Modal Component Ts File**
 
