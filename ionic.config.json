@@ -1,0 +1,7 @@
+{
+  "name": "Lang-select",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
