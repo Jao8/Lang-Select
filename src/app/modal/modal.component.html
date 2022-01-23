@@ -1,3 +1,23 @@
-<div class="modal-wrapper">
-  <p>Modal Works!</p>
-</div>
+<ion-list class="">
+  <ion-list-header class="header">
+    <ion-label class="header-title">IDIOMAS</ion-label>
+    <ion-button
+      class="ion-justify-content-between close-button"
+      (click)="dismissModal()"
+    >
+      <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-list-header>
+
+  <div class="lang-items">
+    <ion-item button (click)="setLang(lang.id)" detail="false" *ngFor="let lang of langs">
+      <span [class]="'icon fi fi-' + lang.icon"></span>
+      <ion-label class="ion-margin-start">{{ lang.name }}</ion-label>
+    </ion-item>
+  </div>
+  <ion-footer class="ion-align-self-end">
+    <ion-item button detail="false" (click)="dismissModal()">
+      <ion-label class="ion-text-center">Cancelar</ion-label>
+    </ion-item>
+  </ion-footer>
+</ion-list>

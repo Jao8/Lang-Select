@@ -1,4 +1,4 @@
-import { ModalComponent } from './../modal/modal.component';
+import { Language, ModalComponent } from './../modal/modal.component';
 import { Component } from '@angular/core';
 import { IonRouterOutlet, ModalController } from '@ionic/angular';
 
@@ -9,35 +9,30 @@ import { IonRouterOutlet, ModalController } from '@ionic/angular';
 })
 export class HomePage {
 
-  public langs: object[];
+  private lang?: Language;
 
   constructor(
     public routerOutlet: IonRouterOutlet,
     public modalController: ModalController,
-  ) {
-    this.langs = [
-      {
-        id: 1,
-        locale: 'pt_BR',
-        name: 'Portugues'
-      },
-      {
-        id: 2,
-        locale: 'en',
-        name: 'Ingles'
-      },
-      {
-        id: 3,
-        locale: 'es',
-        name: 'Espanhol'
-      }
-    ]
-  }
+  ) {  }
+
+test(){
+  console.log(this.lang);
+
+}
 
   async openModal(){
     const modal = await this.modalController.create({
       component: ModalComponent,
-      cssClass: 'lang-modal'
+      cssClass: 'lang-modal',
+      backdropDismiss: false
+    });
+
+    modal.onWillDismiss().then( (e) => {
+      this.lang = e.data.lang;
+      this.test();
+    }).catch(err => {
+      console.log(err);
     });
 
     return await modal.present();
